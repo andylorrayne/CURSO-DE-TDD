@@ -21,13 +21,13 @@ public class testeCamelCase {
 
     @Test
     public void validandoSaida(){
-        ArrayList<String> listaEsperada = new ArrayList<>(Arrays.asList("andressa","l","figueiredo"));
-        ArrayList<String> listaAtual = CamelCase.converterCamelCase("AndressaLFigueiredo");
+        ArrayList<String> listaEsperada = new ArrayList<>(Arrays.asList("andressa","l", "s","figueiredo"));
+        ArrayList<String> listaAtual = CamelCase.converterCamelCase("AndressaLSFigueiredo");
         assertEquals(listaEsperada, listaAtual);
 
-        ArrayList<String> listaEsperada2 = new ArrayList<>(Arrays.asList("andressa","lorrayne","123", "cpfgg","lorrayne"));
-        ArrayList<String> listaAtual2 = CamelCase.converterCamelCase("AndressaLorrayne123CPFGGLorrayne");
-        //assertEquals(listaEsperada2, listaAtual2);
+        ArrayList<String> listaEsperada2 = new ArrayList<>(Arrays.asList("ana","g" ,"125","luz"));
+        ArrayList<String> listaAtual2 = CamelCase.converterCamelCase("AnaG125Luz");
+        assertEquals(listaEsperada2, listaAtual2);
         
     }
        
