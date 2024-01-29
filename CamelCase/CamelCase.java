@@ -34,13 +34,11 @@ public class CamelCase {
                 if (novaPalavra.length()>0) {
                     camelCaseConvertido.add(novaPalavra.toString());
                     novaPalavra.setLength(0);
-                    //novaPalavra.append(c);
                     
                 }
-                
-                
+
             }
-            //novaPalavra.append(c);//adiciona o caracter atual na palavra nova            
+                      
             //condição que inicia a string numerica
             if (Character.isDigit(c)) {
                  if (novaPalavra.length() > 0) {
@@ -54,10 +52,7 @@ public class CamelCase {
                     novaPalavra.append(frase.charAt(++i));
                 }
                     
-                //camelCaseConvertido.add(novaPalavra.toString());
-                //novaPalavra.setLength(0);
-
-                 
+                               
             }else{
                 
                 novaPalavra.append(c);
@@ -69,13 +64,25 @@ public class CamelCase {
 
         }
         
-        camelCaseConvertido = camelCaseConvertido.stream()
+        /*camelCaseConvertido = camelCaseConvertido.stream()
+                                .map(String::toLowerCase)
+                                .collect(Collectors.toCollection(ArrayList::new));*/
+
+        return devolveArrayLowerCase(camelCaseConvertido);
+
+    }
+
+    //Metodo que deixo toda lista em lower case
+    public static ArrayList<String> devolveArrayLowerCase(ArrayList<String> camelCaseArrayList) {
+        
+        ArrayList<String> devolveArrayLowerCase = new ArrayList<>();
+        devolveArrayLowerCase = camelCaseArrayList.stream()
                                 .map(String::toLowerCase)
                                 .collect(Collectors.toCollection(ArrayList::new));
 
-        return camelCaseConvertido;
-
+        return devolveArrayLowerCase;
     }
+
    
 }
 

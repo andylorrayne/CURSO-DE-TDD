@@ -25,8 +25,8 @@ public class testeCamelCase {
         ArrayList<String> listaAtual = CamelCase.converterCamelCase("AndressaLSFigueiredo");
         assertEquals(listaEsperada, listaAtual);
 
-        ArrayList<String> listaEsperada2 = new ArrayList<>(Arrays.asList("ana","g" ,"125","luz"));
-        ArrayList<String> listaAtual2 = CamelCase.converterCamelCase("AnaG125Luz");
+        ArrayList<String> listaEsperada2 = new ArrayList<>(Arrays.asList("ana","g" ,"125","luz","588"));
+        ArrayList<String> listaAtual2 = CamelCase.converterCamelCase("AnaG125Luz588");
         assertEquals(listaEsperada2, listaAtual2);
         
     }
