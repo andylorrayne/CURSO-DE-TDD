@@ -63,15 +63,13 @@ public class CamelCase {
             camelCaseConvertido.add(novaPalavra.toString());
 
         }
-        
-        /*camelCaseConvertido = camelCaseConvertido.stream()
-                                .map(String::toLowerCase)
-                                .collect(Collectors.toCollection(ArrayList::new));*/
 
         return devolveArrayLowerCase(camelCaseConvertido);
 
     }
 
+
+    
     //Metodo que deixo toda lista em lower case
     public static ArrayList<String> devolveArrayLowerCase(ArrayList<String> camelCaseArrayList) {
         
